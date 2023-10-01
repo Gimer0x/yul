@@ -1,53 +1,38 @@
-//SPDX-License-Identifier: GPL-3.0
-pragma solidity 0.8.21;
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity 0.8.17;
 
-contract ForLoopYul {
-    // Yul has no else statement
-
-    function forLoopYul(uint8 x) external pure returns(uint256 result){
-
-        assembly {
-            for { let i :=0 } lt(i, x) { i:= add(i,1) } {
-                result:= add(result, 2)
-            }
-        }
-        return result;
-    }
-    
-    function isPrime(uint256 x) public pure returns(bool p) {
+contract IsPrime {
+    function isPrime(uint256 x) public pure returns (bool p) {
         p = true;
-
         assembly {
-            let halfX := add(div(x,2),1)
-            
-            let i:= 2
-            for{ } lt( i, halfX) {} { 
-                    if iszero(mod(x,i)){
-                        p:=0
-                        break
-                    }
-                    i := add(i,1)
+            let halfX := add(div(x, 2), 1)
+            let i := 2
+            for {
+
+            } lt(i, halfX) {
+
+            } {
+                if iszero(mod(x, i)) {
+                    p := 0
+                    break
                 }
 
+                i := add(i, 1)
+            }
         }
-        return p;
     }
 
-
-    function testPrime() external pure returns (bool){
+    function testPrime() external pure {
         require(isPrime(2));
         require(isPrime(3));
         require(!isPrime(4));
         require(!isPrime(15));
         require(isPrime(23));
         require(isPrime(101));
-
-        return true;
     }
 }
 
-contract IfStatement {
-
+contract IfComparison {
     function isTruthy() external pure returns (uint256 result) {
         result = 2;
         assembly {
@@ -70,17 +55,6 @@ contract IfStatement {
         return result; // returns 1
     }
 
-    function isEqual(uint256 x, uint256 y) external pure returns(bool result) {
-        result = false;
-        assembly{
-            
-            if eq(x,y) {
-                result:= 1
-            } 
-            // This is equivalent to: result:= eq(x,y)
-        }
-    }
-
     function negation() external pure returns (uint256 result) {
         result = 1;
         assembly {
@@ -92,7 +66,7 @@ contract IfStatement {
         return result; // returns 2
     }
 
-    function unsafe1Negation() external pure returns (uint256 result) {
+    function unsafe1NegationPart1() external pure returns (uint256 result) {
         result = 1;
         assembly {
             if not(0) {
@@ -103,17 +77,13 @@ contract IfStatement {
         return result; // returns 2
     }
 
-    function bitFlipDemo() external pure returns (bytes32 result1, bytes32 result2, bytes32 result3) {
-        bytes32 uno = 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff;
-
+    function bitFlip() external pure returns (bytes32 result) {
         assembly {
-            result1 := not(2)
-            result2 := not(0)
-            result3 := not(uno)
+            result := not(2)
         }
     }
 
-    function unsafe2Negation() external pure returns (uint256 result) {
+    function unsafe2NegationPart() external pure returns (uint256 result) {
         result = 1;
         assembly {
             if not(2) {
@@ -123,6 +93,7 @@ contract IfStatement {
 
         return result; // returns 2
     }
+
 
     function safeNegation() external pure returns (uint256 result) {
         result = 1;
@@ -135,19 +106,19 @@ contract IfStatement {
         return result; // returns 1
     }
 
-    function getMax(uint256 x, uint256 y) external pure returns (uint256 max) {
+    function max(uint256 x, uint256 y) external pure returns (uint256 maximum) {
         assembly {
-            if lt(x,y) {
-                max := y
+            if lt(x, y) {
+                maximum := y
             }
-
-            if iszero(lt(x,y)) {
-                max := x
+            if iszero(lt(x, y)) {
+                // there are no else statements
+                maximum := x
             }
         }
     }
 
-     // The rest:
+    // The rest:
     /*
         | solidity | YUL       |
         +----------+-----------+
@@ -174,4 +145,3 @@ contract IfStatement {
 
     */
 }
-
