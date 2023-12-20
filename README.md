@@ -12,7 +12,7 @@ In this repository you will find a set of examples that I have written in order 
 **Folders:**
 * **Udemy-Course-Yul**: These are my exercises from the course  [**Advanced Solidity: Yul and Assembly**](https://www.udemy.com/course/advanced-solidity-yul-and-assembly/), developed by Jeffrey Scholz in Udemy.
 
-**Additional Resources:**
+## **Additional Resources:**
 
 + [**EVM Codes - An EVM Opcodes Interactive Reference**](https://www.evm.codes/)
   - Interactive Website & EVM playground. A very useful tool to practice and observe how opcodes work.
@@ -29,3 +29,11 @@ A series of blog posts to describe in detail how the solidity code is interprete
   - [Part 5 - Function Bodies](https://blog.zeppelin.solutions/deconstructing-a-solidity-contract-part-v-function-bodies-2d19d4bef8be)
   - [Part 6 - The Metadata Hash](https://blog.zeppelin.solutions/deconstructing-a-solidity-contract-part-vi-the-swarm-hash-70f069e22aef)
 
+- **Noxx - EVM Deep Dives**
+A series of blog posts that review in detail specific parts of the EVM taking you from solidity code to the EVM opcodes
+ 
+  - [Part 1 - Function Selector Deep Dive](https://noxx.substack.com/p/evm-deep-dives-the-path-to-shadowy?s=r)
+  - [Part 2 - Memory in the EVM](https://noxx.substack.com/p/evm-deep-dives-the-path-to-shadowy-d6b?s=r)
+  - [Part 3 - Storage in the EVM](https://noxx.substack.com/p/evm-deep-dives-the-path-to-shadowy-3ea?s=r)
+  - [Part 4 - Storage Opcodes In the Go Ethereum (Geth) Client](https://noxx.substack.com/p/evm-deep-dives-the-path-to-shadowy-5a5?utm_source=%2Fprofile%2F80455042-noxx&utm_medium=reader2&s=r)
+  - [Part 5 - Delegate Call Deep Dive](https://noxx.substack.com/p/evm-deep-dives-the-path-to-shadowy-a5f?utm_source=%2Fprofile%2F80455042-noxx&utm_medium=reader2&s=r)
