@@ -14,9 +14,9 @@ In this repository you will find a set of examples that I have written in order 
 
 **Resources:**
 
-+ [**EVM Codes - An EVM Opcodes Interactive Reference**](https://www.evm.codes/) 
-* Interactice Website & EVM playground. A very useful tool to practice and observe how opcodes work.
++ [**EVM Codes - An EVM Opcodes Interactive Reference**](https://www.evm.codes/): 
+  * Interactice Website & EVM playground. A very useful tool to practice and observe how opcodes work.
 
 + [**Andreas Antonopoulos - The Ethereum Virtual Machine**](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc)
-* In thi ebook, chapter 13 covers the fundamentals of how the EVM works and shows the EVM interaction with the protocol layer. 
+  * In thi ebook, chapter 13 covers the fundamentals of how the EVM works and shows the EVM interaction with the protocol layer. 
 
