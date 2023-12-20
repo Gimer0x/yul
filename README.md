@@ -9,5 +9,14 @@ Yul is designed to be a low-level stack-based language, providing developers wit
 
 In this repository you will find a set of examples that I have written in order to master Yul programming and smart contract optimization. Also, you will find exercises from courses and other articles.
 
-Folders:
-* **Udemy-Course-Yul**: These are my exercises from the course  [**Advanced Solidity: Yul and Assembly**](https://www.udemy.com/course/advanced-solidity-yul-and-assembly/), developed by Jeffrey Scholz in Udemy. 
+**Folders:**
+* **Udemy-Course-Yul**: These are my exercises from the course  [**Advanced Solidity: Yul and Assembly**](https://www.udemy.com/course/advanced-solidity-yul-and-assembly/), developed by Jeffrey Scholz in Udemy.
+
+**Resources:**
+
++ [**EVM Codes - An EVM Opcodes Interactive Reference**](https://www.evm.codes/) 
+* Interactice Website & EVM playground. A very useful tool to practice and observe how opcodes work.
+
++ [**Andreas Antonopoulos - The Ethereum Virtual Machine**](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc)
+* In thi ebook, chapter 13 covers the fundamentals of how the EVM works and shows the EVM interaction with the protocol layer. 
+
