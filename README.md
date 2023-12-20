@@ -9,18 +9,27 @@ Yul is designed to be a low-level stack-based language, providing developers wit
 
 In this repository you will find a set of examples that I have written in order to master Yul programming and smart contract optimization. Also, you will find exercises from courses and other articles.
 
-## **Folders**
+## Folders
 * **Udemy-Course-Yul**: These are my exercises from the course  [**Advanced Solidity: Yul and Assembly**](https://www.udemy.com/course/advanced-solidity-yul-and-assembly/), developed by Jeffrey Scholz in Udemy.
 
-## **Additional Resources**
+## Suggested Videos
 
-+ [**EVM Codes - An EVM Opcodes Interactive Reference**](https://www.evm.codes/): Interactive Website & EVM playground. A very useful tool to practice and observe how opcodes work.
+- [Ethereum Under the Hood: Algorithms And Data Structures](https://www.youtube.com/watch?v=OxofT39TJgg) by Marek Kirejczyk
 
-+ [**Andreas Antonopoulos - The Ethereum Virtual Machine**](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc): In this ebook, chapter 13 covers the fundamentals of how the EVM works and shows the EVM interaction with the protocol layer.
+- [EVM From Solidity to Bytecode, Memory & Storage](https://www.youtube.com/watch?v=RxL_1AfV7N4&t=2s) by Peter Robinson
 
-+ [**Femboy Capital - A Playdate with the EVM**](https://femboy.capital/evm-pt1): This blogpost deep dive into the EVM, explaining how stack machines work before showing how to write assembly code.
 
-+ [**Openzeppelin - Deconstructing a Solidity Contract**](https://openzeppelin.com/): A series of blog posts to describe in detail how the solidity code is interpreted and executed by the EVM.
+## Additional Resources
+
++ [EVM Codes - An EVM Opcodes Interactive Reference](https://www.evm.codes/): Interactive Website & EVM playground. A very useful tool to practice and observe how opcodes work.
+
++ [Andreas Antonopoulos - The Ethereum Virtual Machine](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc): In this ebook, chapter 13 covers the fundamentals of how the EVM works and shows the EVM interaction with the protocol layer.
+
++ [Femboy Capital - A Playdate with the EVM](https://femboy.capital/evm-pt1): This blogpost deep dive into the EVM, explaining how stack machines work before showing how to write assembly code.
+
++ [Solidity Tutorial All About Assembly](https://jeancvllr.medium.com/solidity-tutorial-all-about-assembly-5acdfefde05c): A blogpost that explains in detail about EVM assembly, opcodes & using it in solidity.
+
++ [Openzeppelin - Deconstructing a Solidity Contract](https://openzeppelin.com/): A series of blog posts to describe in detail how the solidity code is interpreted and executed by the EVM.
   - [Part 1 - Introduction](https://blog.openzeppelin.com/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737/)
   - [Part 2 - Runtime vs Creation Bytecode](https://blog.zeppelin.solutions/deconstructing-a-solidity-contract-part-ii-creation-vs-runtime-6b9d60ecb44c)
   - [Part 3 - Function Selector](https://blog.zeppelin.solutions/deconstructing-a-solidity-contract-part-iii-the-function-selector-6a9b6886ea49)
@@ -34,7 +43,7 @@ In this repository you will find a set of examples that I have written in order 
   - [Part 3 - How dynamic data types are represented](https://medium.com/@hayeah/diving-into-the-ethereum-vm-the-hidden-costs-of-arrays-28e119f04a9b)
   - [Part 4 - How ABI Encodes External Method Calling](https://medium.com/@hayeah/how-to-decipher-a-smart-contract-method-call-8ee980311603)
 
-+ **Noxx - EVM Deep Dives**: A series of blog posts that review in detail specific parts of the EVM taking you from solidity code to the EVM opcodes
++ [Noxx - EVM Deep Dives](https://noxx.substack.com/p/evm-deep-dives-the-path-to-shadowy?s=r): A series of blog posts that review in detail specific parts of the EVM taking you from solidity code to the EVM opcodes
  
   - [Part 1 - Function Selector Deep Dive](https://noxx.substack.com/p/evm-deep-dives-the-path-to-shadowy?s=r)
   - [Part 2 - Memory in the EVM](https://noxx.substack.com/p/evm-deep-dives-the-path-to-shadowy-d6b?s=r)
@@ -42,11 +51,11 @@ In this repository you will find a set of examples that I have written in order 
   - [Part 4 - Storage Opcodes In the Go Ethereum (Geth) Client](https://noxx.substack.com/p/evm-deep-dives-the-path-to-shadowy-5a5?utm_source=%2Fprofile%2F80455042-noxx&utm_medium=reader2&s=r)
   - [Part 5 - Delegate Call Deep Dive](https://noxx.substack.com/p/evm-deep-dives-the-path-to-shadowy-a5f?utm_source=%2Fprofile%2F80455042-noxx&utm_medium=reader2&s=r)
 
-+ [**Fvictorio - EVM Puzzle**](https://github.com/fvictorio/evm-puzzles): These repositories are a collection of interactive EVM puzzles on GitHub.
++ [Fvictorio - EVM Puzzle](https://github.com/fvictorio/evm-puzzles): These repositories are a collection of interactive EVM puzzles on GitHub.
   - [Fvictorio - EVM Puzzles](https://github.com/fvictorio/evm-puzzles)
   - [Daltboy - More EVM Puzzles](https://github.com/daltyboy11/more-evm-puzzles)
 
-+ [**Official Solidity Docs**](https://docs.soliditylang.org/en/v0.8.10/internals/layout_in_storage.html): Official Solidity Docs for how storage, memory & calldata are handled in a solidity contract
++ [Official Solidity Docs](https://docs.soliditylang.org/en/v0.8.10/internals/layout_in_storage.html): Official Solidity Docs for how storage, memory & calldata are handled in a solidity contract
   - [Yul Programming Language](https://docs.soliditylang.org/en/latest/yul.html)
   - [Layout of State Variables in Storage](https://docs.soliditylang.org/en/v0.8.10/internals/layout_in_storage.html)
   - [Layout in Memory](https://docs.soliditylang.org/en/v0.8.10/internals/layout_in_memory.html)
