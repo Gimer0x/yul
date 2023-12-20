@@ -7,4 +7,7 @@ Yul is an intermediate language that compiles to **EVM bytecode**. It is designe
 
 Yul is designed to be a low-level stack-based language, providing developers with the ability to write more optimized and efficient code. It serves as the bridge between the higher-level Solidity code and the low-level EVM bytecode.
 
-In this repository you will find a set of exercises and examples that I have written in order to master Yul programming and Smart contract optimization.
+In this repository you will find a set of examples that I have written in order to master Yul programming and smart contract optimization. Also, you will find exercises from courses and other articles.
+
+Folders:
+* **Udemy-Course-Yul**: These are my exercises from the course  [**Advanced Solidity: Yul and Assembly**](https://www.udemy.com/course/advanced-solidity-yul-and-assembly/), developed by Jeffrey Scholz in Udemy. 
