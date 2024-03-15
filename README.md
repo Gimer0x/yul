@@ -1,6 +1,13 @@
 # Yul Programming Language
 This repository is a collection of excercises and resources to learn the programming language [**Yul**](https://docs.soliditylang.org/en/latest/). Understanding Yul is key to become an advanced Solidity developer or EVM security researcher.
 
+# Table of Contents
+1. [The Ethereum Virtual Machine](#the-ethereum-virtual-machine-evm)
+2. [Yul Tutorial](#yul-tutorial)
+2. [Folders](#folders)
+2. [Suggested Videos](#suggested-videos)
+3. [Additional Resources](#additional-resources)
+
 ## The Ethereum Virtual Machine (EVM)
 The **Ethereum Virtual Machine (EVM)** is the core component of the Ethereum network. This component allows the execution of smart contracts written in Solidity. After writing the contract, it is compiled into bytecode and deployed to the EVM. In this [**article**](https://medium.com/coinsbench/ethereum-virtual-machine-evm-deep-dive-part-i-7dd6fe7b2f44?sk=ecde25a77594f0a99366c23bc79aaa3c) you can find an introduction to the EVM.
 
@@ -11,6 +18,44 @@ Yul is an intermediate language that compiles to **EVM bytecode**. It is designe
 Yul is designed to be a low-level stack-based language, providing developers with the ability to write more optimized and efficient code. It serves as the bridge between the higher-level Solidity code and the low-level EVM bytecode.
 
 In this repository you will find a set of examples that I have written in order to master Yul programming and smart contract optimization. Also, you will find exercises from courses and other articles.
+
+## Yul Tutorial
+
+### Basic Syntax
+To use assembly within a solidity smart contract, just insert an assembly block inside a solidity function:
+
+```solidity 
+function sendFunds(uint256 amount) external{
+
+  assembly {
+    let x := amount
+  }
+
+}
+```
+
+### Types in Yul
+Yul does not have the concept of types. It only works with `32 bytes` words. However, we can read and write from Solidity variables, for example: 
+
+```solidity 
+assembly {
+  let a := 1234
+  let b := true
+  let c := "hello world"
+  let d := 0xabcdef
+}
+```
+In this example, we asigned Solidity literals to assembly variables. Not that we use the keyword `let` to declare a variable. Internally Yul represents these values as follows:
+
+```solidity 
+a = 0x0000000000000000000000000000000000000000000000000000000000001234
+b = 0x0000000000000000000000000000000000000000000000000000000000000001
+c = 0x68656c6c6f20776f726c64000000000000000000000000000000000000000000
+d = 0x0000000000000000000000000000000000000000000000000000000000abcdef
+
+```
+
+
 
 ## Folders
 * **Udemy-Course-Yul**: These are my exercises from the course  [**Advanced Solidity: Yul and Assembly**](https://www.udemy.com/course/advanced-solidity-yul-and-assembly/), developed by Jeffrey Scholz in Udemy.
