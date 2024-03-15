@@ -2,7 +2,7 @@
 This repository is a collection of excercises and resources to learn the programming language [**Yul**](https://docs.soliditylang.org/en/latest/). Understanding Yul is key to become an advanced Solidity developer or EVM security researcher.
 
 ## The Ethereum Virtual Machine (EVM)
-The **Ethereum Virtual Machine (EVM)** is the core component of the Ethereum network. This component allows the execution of smart contracts written in Solidity. After writing the contract, it is compiled into bytecode and deployed to the EVM.
+The **Ethereum Virtual Machine (EVM)** is the core component of the Ethereum network. This component allows the execution of smart contracts written in Solidity. After writing the contract, it is compiled into bytecode and deployed to the EVM. In this [**article**](https://medium.com/coinsbench/ethereum-virtual-machine-evm-deep-dive-part-i-7dd6fe7b2f44?sk=ecde25a77594f0a99366c23bc79aaa3c) you can find an introduction to the EVM.
 
 **Solidity Assembly** refers to a low-level programming language that allows developers to write code at a level closer to the EVM itself. It provides a more granular control over the execution of smart contracts, allowing for optimizations and customization that may not be achievable through higher-level Solidity code alone. The language used for inline assembly in Solidity is known as **Yul**. 
 
@@ -38,6 +38,8 @@ In this repository you will find a set of examples that I have written in order 
 + [Femboy Capital - A Playdate with the EVM](https://femboy.capital/evm-pt1): This blogpost deep dive into the EVM, explaining how stack machines work before showing how to write assembly code.
 
 + [Solidity Tutorial All About Assembly](https://jeancvllr.medium.com/solidity-tutorial-all-about-assembly-5acdfefde05c): A blogpost that explains in detail about EVM assembly, opcodes & using it in solidity.
+
++ [Ethereum Virtual Machine (EVM) Deep Dive P.1](https://medium.com/coinsbench/ethereum-virtual-machine-evm-deep-dive-part-i-7dd6fe7b2f44?sk=ecde25a77594f0a99366c23bc79aaa3c): This is a series of articles explaining the Ethereum Virtual Machine.
 
 + [Openzeppelin - Deconstructing a Solidity Contract](https://openzeppelin.com/): A series of blog posts to describe in detail how the solidity code is interpreted and executed by the EVM.
   - [Part 1 - Introduction](https://blog.openzeppelin.com/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737/)
