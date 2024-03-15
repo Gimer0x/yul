@@ -68,9 +68,9 @@ To retrieve and set storage variables we use the functions:
 
 ```solidity
 contract StorageBasics {
-    uint256 x = 1;
-    uint256 y = 23;
-    uint256 z = 48;
+    uint256 x = 10;
+    uint256 y = 20;
+    uint256 z = 30;
 
     function getValueX() external view returns (bytes32 ret) {
         assembly {
@@ -83,7 +83,7 @@ contract StorageBasics {
             ret := sload(slot)
         }
     }
-    // CAUTION! Dangerous operation, never allow external users to set arbitrary slot values.
+    // DANGEROUS OPERATION! Never allow external users to set arbitrary slots.
     function setValue(uint256 slot, uint256 value) external {
         assembly {
             sstore(slot, value)
