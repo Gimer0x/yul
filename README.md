@@ -54,10 +54,44 @@ c = 0x68656c6c6f20776f726c64000000000000000000000000000000000000000000
 d = 0x0000000000000000000000000000000000000000000000000000000000abcdef
 
 ```
-Each variable is represented as a 64 characters (or 32 bytes). Every byte is represented by two characters. Because there is no boolean type in Yul, all operations return full 32-byte words, even the logical operations like and, or and not.  A `false`value is represented as full word with all 0s and a full word with 1 at the end for a `true`value. 
+Each variable is represented as a 64 characters (or 32 bytes). Every byte is represented by two characters. Because there is no boolean type in Yul, all operations return full 32-byte words, even the logical operations like and, or and not. A `false`value is represented as full word with all 0s and a full word with 1 at the end for a `true`value. 
 
 The `not` operator performs negation on the bit level (it flips all 0s to 1s and vice versa), which means that not(1) will still return true, because all bits except the first one will be ones.
 
+### Storage variables
+
+To retrieve and set storage variables we use the functions:
+
+- **slot** - returns the location of a variable.
+- **sload** - reads a value from a given storage slot.
+- **sstore** - writes a value to given storage slot.
+
+```solidity
+contract StorageBasics {
+    uint256 x = 1;
+    uint256 y = 23;
+    uint256 z = 48;
+
+    function getValueX() external view returns (bytes32 ret) {
+        assembly {
+            ret := sload(x.slot)
+        }
+    }
+
+    function getSlot(uint256 slot) external view returns (bytes32 ret) {
+        assembly {
+            ret := sload(slot)
+        }
+    }
+    // CAUTION! Dangerous operation, never allow external users to set arbitrary slot values.
+    function setValue(uint256 slot, uint256 value) external {
+        assembly {
+            sstore(slot, value)
+        }
+    }
+}
+
+```
 
 ## Folders
 * **Udemy-Course-Yul**: These are my exercises from the course  [**Advanced Solidity: Yul and Assembly**](https://www.udemy.com/course/advanced-solidity-yul-and-assembly/), developed by Jeffrey Scholz in Udemy.
