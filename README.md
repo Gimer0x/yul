@@ -1,4 +1,7 @@
-# The Ethereum Virtual Machine (EVM)
+# Yul Programming Language
+This repository is a collection of excercises and resources to learn the programming language [Yul](https://docs.soliditylang.org/en/latest/). Understanding Yul is key to become an advanced Solidity developer or EVM security researcher. 
+
+## The Ethereum Virtual Machine (EVM)
 The **Ethereum Virtual Machine (EVM)** is the core component of the Ethereum network. This component allows the execution of smart contracts written in Solidity. After writing the contract, it is compiled into bytecode and deployed to the EVM.
 
 **Solidity Assembly** refers to a low-level programming language that allows developers to write code at a level closer to the EVM itself. It provides a more granular control over the execution of smart contracts, allowing for optimizations and customization that may not be achievable through higher-level Solidity code alone. The language used for inline assembly in Solidity is known as **Yul**. 
